@@ -47,14 +47,3 @@ Python can be written and executed using IDEs like
 
 <hr>
 
-<h2>🎯 Outcome</h2>
-<p>
-Learning Python helps in building applications, automating tasks,
-and creating a strong foundation for advanced technologies.
-</p>
-
-<hr>
-
-<p align="center">
-  ⭐ <b>Python is widely used across industries for its simplicity and efficiency.</b>
-</p>
