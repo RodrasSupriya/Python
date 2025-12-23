@@ -47,3 +47,95 @@ Python can be written and executed using IDEs like
 
 <hr>
 
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="40"/>
+  Python Basics
+</h1>
+
+<p align="center">
+  Data Types • Variables • Memory • Comments
+</p>
+
+<hr>
+
+<h2>📊 Data Types in Python</h2>
+<p>
+Python provides built-in data types to store different kinds of data.
+These data types define the type of value a variable can hold.
+</p>
+
+<ul>
+  <li>🔢 <b>Numeric:</b> int, float, complex</li>
+  <li>🔤 <b>Text:</b> str</li>
+  <li>📦 <b>Sequence:</b> list, tuple, range</li>
+  <li>🔑 <b>Mapping:</b> dict</li>
+  <li>🧮 <b>Set:</b> set</li>
+  <li>✔ <b>Boolean:</b> bool</li>
+</ul>
+
+<hr>
+
+<h2>📌 Variables in Python</h2>
+<p>
+Variables are used to store data values. Python does not require
+explicit declaration of variable types.
+</p>
+
+<ul>
+  <li>📝 Variable type is decided at runtime</li>
+  <li>⚡ No need to declare data type explicitly</li>
+  <li>🔄 Variable values can be changed</li>
+</ul>
+
+<hr>
+
+<h2>🧠 Memory Allocation</h2>
+<p>
+Python automatically manages memory. When a variable is created,
+memory is allocated dynamically and referenced by the variable name.
+</p>
+
+<ul>
+  <li>📍 Variables point to memory locations</li>
+  <li>🔁 Same values may share memory</li>
+  <li>♻ Unused memory is cleared automatically</li>
+</ul>
+
+<hr>
+
+<h2>📐 Rules for Declaring Variables</h2>
+
+<ul>
+  <li>✔ Must start with a letter or underscore (_)</li>
+  <li>❌ Cannot start with a number</li>
+  <li>✔ Can contain letters, numbers, and underscores</li>
+  <li>❌ Cannot use Python keywords</li>
+  <li>✔ Case-sensitive (name and Name are different)</li>
+</ul>
+
+<hr>
+
+<h2>💬 Comments in Python</h2>
+<p>
+Comments are used to explain code and improve readability.
+They are ignored during execution.
+</p>
+
+<ul>
+  <li>🟢 <b>Single-line Comment:</b> Uses <code>#</code></li>
+  <li>🟣 <b>Multi-line Comment:</b> Uses triple quotes <code>''' '''</code> or <code>""" """</code></li>
+</ul>
+
+<hr>
+
+<h2>🎯 Outcome</h2>
+<p>
+Understanding Python data types, variables, memory handling,
+and comments helps in writing clean, efficient, and error-free programs.
+</p>
+
+<hr>
+
+<p align="center">
+  ⭐ <b>These concepts form the foundation of Python programming.</b>
+</p>
