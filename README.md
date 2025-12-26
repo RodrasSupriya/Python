@@ -183,6 +183,78 @@ Python has a rich collection of built-in and external libraries.
 </ul>
 
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="40"/>
+  Python Strings
+</h1>
+
+<hr>
+
+<h2>🔤 Strings in Python</h2>
+<p>
+A string is a sequence of characters enclosed in single or double quotes.
+Strings are <b>immutable</b>, meaning their content cannot be changed.
+</p>
+
+<hr>
+
+<h2>📍 Indexing & Slicing</h2>
+<ul>
+  <li>🔢 <b>Indexing:</b> Access characters using position (starts from 0)</li>
+  <li>✂ <b>Slicing:</b> Extract a part of a string</li>
+  <li>⏩ <b>Skipping:</b> Slice with steps (start:end:step)</li>
+</ul>
+
+<hr>
+
+<h2>🔒 Mutability</h2>
+<ul>
+  <li>❌ Strings are <b>immutable</b></li>
+  <li>✔ Modification creates a new string</li>
+</ul>
+
+<hr>
+
+<h2>🧰 Built-in String Functions</h2>
+
+<ul>
+  <li>🔠 <b>capitalize():</b> First letter uppercase</li>
+  <li>🔡 <b>lower():</b> Converts to lowercase</li>
+  <li>🔠 <b>upper():</b> Converts to uppercase</li>
+  <li>✔ <b>isupper():</b> Checks uppercase</li>
+  <li>✔ <b>islower():</b> Checks lowercase</li>
+  <li>🔤 <b>isalpha():</b> Checks only alphabets</li>
+  <li>🔢 <b>isnumeric():</b> Checks only numbers</li>
+  <li>🔠➕🔢 <b>isalnum():</b> Checks alphabets & numbers</li>
+  <li>▶ <b>startswith():</b> Checks starting characters</li>
+  <li>⏹ <b>endswith():</b> Checks ending characters</li>
+  <li>🔄 <b>replace():</b> Replaces characters</li>
+  <li>📍 <b>index():</b> Returns position of character</li>
+  <li>🔢 <b>count():</b> Counts occurrences</li>
+</ul>
+
+<hr>
+
+<h2>🔍 Membership Operators</h2>
+<ul>
+  <li>✔ <b>in:</b> Checks if substring exists</li>
+  <li>❌ <b>not in:</b> Checks absence of substring</li>
+</ul>
+
+<hr>
+
+<h2>🔢 ASCII Values</h2>
+<p>
+Each character has an ASCII value.
+Comparisons between strings are based on these values.
+</p>
+
+<ul>
+  <li>🔺 Uppercase letters have lower ASCII values</li>
+  <li>🔻 Lowercase letters have higher ASCII values</li>
+</ul>
+
+<hr>
 
 
 
