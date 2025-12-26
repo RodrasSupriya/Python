@@ -129,5 +129,61 @@ They are ignored during execution.
 </ul>
 
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="40"/>
+  Python Essentials
+</h1>
+
+<p align="center">
+  Type Conversion • Print • Operators • Libraries
+</p>
+
+<hr>
+
+<h2>🔁 Type Conversion</h2>
+<p>
+Type conversion allows changing one data type into another.
+Python supports both automatic and manual type conversions.
+</p>
+
+<ul>
+  <li>🟢 <b>Implicit:</b> Done automatically by Python</li>
+  <li>🔵 <b>Explicit:</b> Using functions like <code>int()</code>, <code>float()</code>, <code>str()</code></li>
+</ul>
+
+<hr>
+
+<hr>
+
+<h2>⚙ Operators in Python</h2>
+
+<ul>
+  <li>➕ <b>Arithmetic:</b> +, -, *, /, %, //</li>
+  <li>📝 <b>Assignment:</b> =, +=, -=, *=, /=</li>
+  <li>🔍 <b>Comparison:</b> ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+  <li>🔗 <b>Logical:</b> and, or, not</li>
+  <li>🆔 <b>Identity:</b> is, is not</li>
+  <li>🧮 <b>Bitwise:</b> &amp; (AND), | (OR)</li>
+  <li>📦 <b>Membership:</b> in, not in</li>
+</ul>
+
+<hr>
+
+<h2>📚 Python Libraries</h2>
+<p>
+Libraries provide reusable code to perform specific tasks efficiently.
+Python has a rich collection of built-in and external libraries.
+</p>
+
+<ul>
+  <li>📊 NumPy</li>
+  <li>📈 Pandas</li>
+  <li>🌐 Requests</li>
+  <li>🤖 TensorFlow</li>
+</ul>
+
+<hr>
+
+
 
 
