@@ -111,6 +111,8 @@ memory is allocated dynamically and referenced by the variable name.
   <li>✔ Can contain letters, numbers, and underscores</li>
   <li>❌ Cannot use Python keywords</li>
   <li>✔ Case-sensitive (name and Name are different)</li>
+  <li>❌ Special Characters are not allowed</li>
+                                                      
 </ul>
 
 <hr>
@@ -128,14 +130,4 @@ They are ignored during execution.
 
 <hr>
 
-<h2>🎯 Outcome</h2>
-<p>
-Understanding Python data types, variables, memory handling,
-and comments helps in writing clean, efficient, and error-free programs.
-</p>
 
-<hr>
-
-<p align="center">
-  ⭐ <b>These concepts form the foundation of Python programming.</b>
-</p>
