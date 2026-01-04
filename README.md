@@ -1895,27 +1895,6 @@ Error Line: 6
 
 <hr>
 
-<h3>📌 Using <code>os</code> Module (File Error Example)</h3>
-<p>
-The <code>os</code> module can be used to demonstrate
-file-related exceptions.
-</p>
-<code>
-import os<br><br>
-try:<br>
-&nbsp;&nbsp;os.remove("unknown.txt")<br>
-except FileNotFoundError as e:<br>
-&nbsp;&nbsp;print("Error Type:", type(e))<br>
-&nbsp;&nbsp;print("Message:", e)
-</code>
-
-<p><b>Output:</b><br>
-Error Type: &lt;class 'FileNotFoundError'&gt;<br>
-Message: [Errno 2] No such file or directory
-</p>
-
-<hr>
-
 <h1 align="center">Object-Oriented Programming (OOPS) in Python</h1>
 
 <p align="center">
@@ -2090,11 +2069,6 @@ These principles are widely used in real-world software development.
 </p>
 
 <hr>
-
-<p align="center">
-  ⭐ <b>OOPS forms the foundation of modern Python programming.</b>
-</p>
-<h1 align="center">Concurrency in Python</h1>
 
 <p align="center">
   Multithreading • Multiprocessing
