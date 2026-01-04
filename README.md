@@ -1433,13 +1433,733 @@ print(add(5, 3))
 
 <hr>
 
+<p align="center">
+  map • filter • reduce • default arguments • comprehensions
+</p>
 
+<hr>
 
+<h2>📌 map() Function</h2>
+<p>
+The <b>map()</b> function applies a given function to each element
+of an iterable and returns a new iterable with transformed values.
+It is mainly used for <b>data transformation</b>.
+</p>
 
+<code>
+nums = [1, 2, 3, 4]<br>
+result = list(map(lambda x: x * 2, nums))<br>
+print(result)
+</code>
 
+<p><b>Output:</b> [2, 4, 6, 8]</p>
 
+<hr>
 
+<h2>📌 filter() Function</h2>
+<p>
+The <b>filter()</b> function selects elements from an iterable
+based on a condition and returns only the elements that satisfy it.
+It is mainly used for <b>data filtering</b>.
+</p>
 
+<code>
+nums = [1, 2, 3, 4, 5]<br>
+result = list(filter(lambda x: x % 2 == 0, nums))<br>
+print(result)
+</code>
 
+<p><b>Output:</b> [2, 4]</p>
+
+<hr>
+
+<h2>📌 reduce() Function</h2>
+<p>
+The <b>reduce()</b> function repeatedly applies a function to the elements
+of an iterable and reduces it to a single value.
+It is commonly used for <b>aggregation operations</b>.
+</p>
+
+<code>
+from functools import reduce<br><br>
+nums = [1, 2, 3, 4]<br>
+result = reduce(lambda a, b: a + b, nums)<br>
+print(result)
+</code>
+
+<p><b>Output:</b> 10</p>
+
+<hr>
+
+<h2>🔁 filter() with map()</h2>
+<p>
+Here, <b>filter()</b> is applied first to select elements,
+then <b>map()</b> transforms the filtered data.
+</p>
+
+<code>
+nums = [1, 2, 3, 4, 5]<br>
+filtered = filter(lambda x: x % 2 == 0, nums)<br>
+result = list(map(lambda x: x * 10, filtered))<br>
+print(result)
+</code>
+
+<p><b>Output:</b> [20, 40]</p>
+
+<hr>
+
+<h2>🔁 map() with filter()</h2>
+<p>
+Here, <b>map()</b> transforms elements first,
+then <b>filter()</b> selects values based on a condition.
+</p>
+
+<code>
+nums = [1, 2, 3, 4]<br>
+mapped = map(lambda x: x * 2, nums)<br>
+result = list(filter(lambda x: x &gt; 4, mapped))<br>
+print(result)
+</code>
+
+<p><b>Output:</b> [6, 8]</p>
+
+<hr>
+
+<h2>⚙ Default Arguments</h2>
+<p>
+A <b>default argument</b> allows a function parameter to have
+a predefined value if no argument is passed.
+</p>
+
+<code>
+def greet(name="User"):<br>
+&nbsp;&nbsp;print("Hello", name)<br><br>
+greet()<br>
+greet("Alice")
+</code>
+
+<p><b>Output:</b><br>
+Hello User<br>
+Hello Alice
+</p>
+
+<hr>
+
+<h2>🧠 Comprehensions</h2>
+<p>
+Comprehensions provide a concise way to create collections
+using a single line of code.
+</p>
+
+<hr>
+
+<h2>📋 List Comprehension</h2>
+<p>
+List comprehension is used to create a list using an expression
+inside square brackets.
+</p>
+
+<code>
+nums = [1, 2, 3, 4]<br>
+squares = [x * x for x in nums]<br>
+print(squares)
+</code>
+
+<p><b>Output:</b> [1, 4, 9, 16]</p>
+
+<hr>
+
+<h2>📘 Dictionary Comprehension</h2>
+<p>
+Dictionary comprehension is used to create a dictionary
+using key-value expressions.
+</p>
+
+<code>
+nums = [1, 2, 3]<br>
+squares = {x: x * x for x in nums}<br>
+print(squares)
+</code>
+
+<p><b>Output:</b> {1: 1, 2: 4, 3: 9}</p>
+
+<hr>
+
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Recursion & File Handling
+</h1>
+
+<p align="center">
+  Recursion • File Handling • Read • Write • Append
+</p>
+
+<hr>
+
+<h2>🔁 Recursion</h2>
+<p>
+<b>Recursion</b> is a programming technique where a function calls itself
+to solve a problem by breaking it into smaller subproblems.
+Every recursive function must have a <b>base condition</b> to stop execution.
+</p>
+
+<h3>📘 Example: Factorial using Recursion</h3>
+<code>
+def factorial(n):<br>
+&nbsp;&nbsp;if n == 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 1<br>
+&nbsp;&nbsp;return n * factorial(n - 1)<br><br>
+result = factorial(5)<br>
+print(result)
+</code>
+
+<p><b>Output:</b> 120</p>
+
+<hr>
+
+<h2>📂 File Handling</h2>
+<p>
+<b>File Handling</b> allows Python programs to create, read, write,
+and update files stored on the system.
+</p>
+
+<p>
+Python uses the <code>open()</code> function to work with files.
+</p>
+
+<hr>
+
+<h2>✍ File Mode: Write (W)</h2>
+<p>
+Mode <b>"w"</b> is used to write data into a file.
+</p>
+
+<h3>📌 Rules of Write Mode</h3>
+<ul>
+  <li>If the file does not exist, it will be created</li>
+  <li>If the file exists, old content will be erased</li>
+  <li>File pointer starts at the beginning</li>
+</ul>
+
+<h3>📘 Example</h3>
+<code>
+file = open("data.txt", "w")<br>
+file.write("Hello Python")<br>
+file.close()
+</code>
+
+<p><b>Output:</b> File <code>data.txt</code> created with content: Hello Python</p>
+
+<hr>
+
+<h2>➕ File Mode: Append (A)</h2>
+<p>
+Mode <b>"a"</b> is used to add new content to an existing file.
+</p>
+
+<h3>📌 Rules of Append Mode</h3>
+<ul>
+  <li>If the file does not exist, it will be created</li>
+  <li>Existing content will not be erased</li>
+  <li>New data is added at the end of the file</li>
+</ul>
+
+<h3>📘 Example</h3>
+<code>
+file = open("data.txt", "a")<br>
+file.write("\nWelcome to File Handling")<br>
+file.close()
+</code>
+
+<p><b>Output:</b> Content added to <code>data.txt</code></p>
+
+<hr>
+
+<h2>📖 File Mode: Read (R)</h2>
+<p>
+Mode <b>"r"</b> is used to read data from a file.
+</p>
+
+<h3>📌 Rules of Read Mode</h3>
+<ul>
+  <li>File must exist, otherwise error occurs</li>
+  <li>File content cannot be modified</li>
+  <li>File pointer starts at the beginning</li>
+</ul>
+
+<h3>📘 Example</h3>
+<code>
+file = open("data.txt", "r")<br>
+content = file.read()<br>
+print(content)<br>
+file.close()
+</code>
+
+<p><b>Output:</b><br>
+Hello Python<br>
+Welcome to File Handling
+</p>
+
+<hr>
+
+<h1 align="center">
+  Python JSON Methods
+</h1>
+
+<p align="center">
+  dump • load • dumps • loads
+</p>
+
+<hr>
+
+<h2>📌 JSON Serialization</h2>
+<p>
+JSON serialization is the process of converting Python objects
+into JSON format and vice versa.
+Python provides this using the <code>json</code> module.
+</p>
+
+<hr>
+
+<h2>📝 json.dump()</h2>
+<p>
+<b>dump()</b> is used to write Python data into a JSON file.
+</p>
+
+<p><b>Example:</b></p>
+<code>
+import json<br><br>
+data = {"name": "Alex", "age": 25}<br>
+file = open("data.json", "w")<br>
+json.dump(data, file)<br>
+file.close()
+</code>
+
+<p><b>Output:</b> Data stored in <code>data.json</code></p>
+
+<hr>
+
+<h2>📖 json.load()</h2>
+<p>
+<b>load()</b> is used to read JSON data from a file
+and convert it back into a Python object.
+</p>
+
+<p><b>Example:</b></p>
+<code>
+import json<br><br>
+file = open("data.json", "r")<br>
+result = json.load(file)<br>
+print(result)<br>
+file.close()
+</code>
+
+<p><b>Output:</b> {'name': 'Alex', 'age': 25}</p>
+
+<hr>
+
+<h2>🔄 json.dumps()</h2>
+<p>
+<b>dumps()</b> converts a Python object into a JSON formatted string.
+</p>
+
+<p><b>Example:</b></p>
+<code>
+import json<br><br>
+data = {"city": "Delhi", "pin": 500001}<br>
+json_string = json.dumps(data)<br>
+print(json_string)
+</code>
+
+<p><b>Output:</b> {"city": "Delhi", "pin": 500001}</p>
+
+<hr>
+
+<h2>🔁 json.loads()</h2>
+<p>
+<b>loads()</b> converts a JSON string into a Python object.
+</p>
+
+<p><b>Example:</b></p>
+<code>
+import json<br><br>
+json_text = '{"city": "Delhi", "pin": 500001}'<br>
+result = json.loads(json_text)<br>
+print(result)
+</code>
+
+<p><b>Output:</b> {'city': 'Delhi', 'pin': 500001}</p>
+
+<hr>
+
+<h1 align="center">Python Exception Handling</h1>
+
+<p align="center">
+  try • except • finally • Error Type • Error Line
+</p>
+
+<hr>
+
+<h2>📌 Exception Handling – Definition</h2>
+<p>
+<b>Exception handling</b> is a mechanism used to handle runtime errors
+so that the normal flow of a program is not interrupted.
+</p>
+
+<hr>
+
+<h2>🧱 try and except Block</h2>
+<p>
+The <b>try</b> block contains code that may cause an error.
+The <b>except</b> block handles the error if it occurs.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+try:<br>
+&nbsp;&nbsp;x = 10<br>
+&nbsp;&nbsp;y = 0<br>
+&nbsp;&nbsp;result = x / y<br>
+except ZeroDivisionError:<br>
+&nbsp;&nbsp;print("Cannot divide by zero")
+</code>
+
+<p><b>Output:</b> Cannot divide by zero</p>
+
+<hr>
+
+<h2>🚫 Division by Zero Exception</h2>
+<p>
+Dividing a number by zero raises a <b>ZeroDivisionError</b>.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+try:<br>
+&nbsp;&nbsp;print(5 / 0)<br>
+except ZeroDivisionError as e:<br>
+&nbsp;&nbsp;print("Error:", e)
+</code>
+
+<p><b>Output:</b> Error: division by zero</p>
+
+<hr>
+
+<h2>🔚 finally Block</h2>
+<p>
+The <b>finally</b> block always executes,
+whether an exception occurs or not.
+It is commonly used for cleanup operations.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+try:<br>
+&nbsp;&nbsp;num = int("10")<br>
+&nbsp;&nbsp;print(num)<br>
+except ValueError:<br>
+&nbsp;&nbsp;print("Invalid conversion")<br>
+finally:<br>
+&nbsp;&nbsp;print("Execution completed")
+</code>
+
+<p><b>Output:</b><br>
+10<br>
+Execution completed
+</p>
+
+<hr>
+
+<h2>⚠ Getting Error Type and Error Line</h2>
+<p>
+Python provides system modules to identify the
+<b>error type</b> and the <b>line number</b> where the error occurred.
+</p>
+
+<h3>📌 Using <code>sys</code> Module</h3>
+<code>
+import sys<br><br>
+try:<br>
+&nbsp;&nbsp;a = 10<br>
+&nbsp;&nbsp;b = 0<br>
+&nbsp;&nbsp;c = a / b<br>
+except:<br>
+&nbsp;&nbsp;print("Error Type:", sys.exc_info()[0])<br>
+&nbsp;&nbsp;print("Error Line:", sys.exc_info()[2].tb_lineno)
+</code>
+
+<p><b>Output:</b><br>
+Error Type: &lt;class 'ZeroDivisionError'&gt;<br>
+Error Line: 6
+</p>
+
+<hr>
+
+<h3>📌 Using <code>os</code> Module (File Error Example)</h3>
+<p>
+The <code>os</code> module can be used to demonstrate
+file-related exceptions.
+</p>
+<code>
+import os<br><br>
+try:<br>
+&nbsp;&nbsp;os.remove("unknown.txt")<br>
+except FileNotFoundError as e:<br>
+&nbsp;&nbsp;print("Error Type:", type(e))<br>
+&nbsp;&nbsp;print("Message:", e)
+</code>
+
+<p><b>Output:</b><br>
+Error Type: &lt;class 'FileNotFoundError'&gt;<br>
+Message: [Errno 2] No such file or directory
+</p>
+
+<hr>
+
+<h1 align="center">Object-Oriented Programming (OOPS) in Python</h1>
+
+<p align="center">
+  Class • Object • Constructor • Inheritance • Polymorphism • Abstraction
+</p>
+
+<hr>
+
+<h2>📌 OOPS – Definition</h2>
+<p>
+<b>Object-Oriented Programming (OOPS)</b> is a programming paradigm
+that organizes code using <b>classes</b> and <b>objects</b>.
+It improves code reusability, scalability, and maintainability.
+</p>
+
+<hr>
+
+<h2>🏷 Class</h2>
+<p>
+A <b>class</b> is a blueprint or template used to create objects.
+It defines variables (attributes) and functions (methods).
+</p>
+
+<h3>📘 Example</h3>
+<code>
+class Student:<br>
+&nbsp;&nbsp;name = "Alex"<br>
+&nbsp;&nbsp;age = 20
+</code>
+
+<hr>
+
+<h2>📦 Object</h2>
+<p>
+An <b>object</b> is an instance of a class.
+It represents a real-world entity created using a class.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+s1 = Student()<br>
+print(s1.name)
+</code>
+
+<p><b>Output:</b> Alex</p>
+
+<hr>
+
+<h2>🔧 Constructor</h2>
+<p>
+A <b>constructor</b> is a special method named <code>__init__()</code>
+that is automatically executed when an object is created.
+It is used to initialize object data.
+</p>
+
+<hr>
+
+<h3>1️⃣ Non-Parameter Constructor</h3>
+<p>
+A constructor that does not accept parameters.
+</p>
+
+<code>
+class Demo:<br>
+&nbsp;&nbsp;def __init__(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Constructor called")<br><br>
+obj = Demo()
+</code>
+
+<p><b>Output:</b> Constructor called</p>
+
+<hr>
+
+<h3>2️⃣ Parameter Constructor</h3>
+<p>
+A constructor that accepts parameters to initialize values.
+</p>
+
+<code>
+class Person:<br>
+&nbsp;&nbsp;def __init__(self, name, age):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br><br>
+p1 = Person("John", 25)<br>
+print(p1.name, p1.age)
+</code>
+
+<p><b>Output:</b> John 25</p>
+
+<hr>
+
+<h2>🧬 Inheritance</h2>
+<p>
+<b>Inheritance</b> allows a class to acquire the properties
+and methods of another class.
+It promotes code reuse.
+</p>
+
+<h3>📚 Types of Inheritance (Definitions Only)</h3>
+<ul>
+  <li><b>Single Inheritance:</b> One child inherits from one parent</li>
+  <li><b>Multilevel Inheritance:</b> A class inherits from another derived class</li>
+  <li><b>Multiple Inheritance:</b> A class inherits from more than one parent</li>
+  <li><b>Hierarchical Inheritance:</b> Multiple classes inherit from one parent</li>
+  <li><b>Hybrid Inheritance:</b> Combination of two or more inheritance types</li>
+</ul>
+
+<hr>
+
+<h2>🔄 Polymorphism</h2>
+<p>
+<b>Polymorphism</b> means “many forms”.
+It allows the same method name to behave differently
+based on the object.
+</p>
+
+<hr>
+
+<h3>🧩 Method Overriding (Runtime Polymorphism)</h3>
+<p>
+<b>Method overriding</b> occurs when a child class
+provides a specific implementation of a method
+already defined in the parent class.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+class Parent:<br>
+&nbsp;&nbsp;def show(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Parent method")<br><br>
+class Child(Parent):<br>
+&nbsp;&nbsp;def show(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Child method")<br><br>
+obj = Child()<br>
+obj.show()
+</code>
+
+<p><b>Output:</b> Child method</p>
+
+<hr>
+
+<h2>🎭 Abstraction</h2>
+<p>
+<b>Abstraction</b> hides implementation details
+and shows only essential features to the user.
+It is achieved using abstract classes.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+from abc import ABC, abstractmethod<br><br>
+class Shape(ABC):<br>
+&nbsp;&nbsp;@abstractmethod<br>
+&nbsp;&nbsp;def area(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pass<br><br>
+class Square(Shape):<br>
+&nbsp;&nbsp;def area(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Area of square")<br><br>
+s = Square()<br>
+s.area()
+</code>
+
+<p><b>Output:</b> Area of square</p>
+
+<hr>
+
+<h2>🎯 Outcome</h2>
+<p>
+Understanding OOPS concepts helps in designing
+modular, reusable, and scalable Python applications.
+These principles are widely used in real-world software development.
+</p>
+
+<hr>
+
+<p align="center">
+  ⭐ <b>OOPS forms the foundation of modern Python programming.</b>
+</p>
+<h1 align="center">Concurrency in Python</h1>
+
+<p align="center">
+  Multithreading • Multiprocessing
+</p>
+
+<hr>
+
+<h2>🧵 Multithreading</h2>
+<p>
+<b>Multithreading</b> is a technique where multiple threads run concurrently
+within the same process. Threads share the same memory space, which makes
+communication faster but less safe.
+</p>
+
+<p>
+Multithreading is best suited for <b>I/O-bound tasks</b> such as file handling,
+network requests, and user input.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+import threading<br><br>
+def task():<br>
+&nbsp;&nbsp;print("Thread is running")<br><br>
+t1 = threading.Thread(target=task)<br>
+t2 = threading.Thread(target=task)<br><br>
+t1.start()<br>
+t2.start()
+</code>
+
+<p><b>Output:</b><br>
+Thread is running<br>
+Thread is running
+</p>
+
+<hr>
+
+<h2>⚙ Multiprocessing</h2>
+<p>
+<b>Multiprocessing</b> is a technique where multiple processes run in parallel.
+Each process has its own memory space, which makes execution safer and faster
+for CPU-intensive tasks.
+</p>
+
+<p>
+Multiprocessing is best suited for <b>CPU-bound tasks</b> such as mathematical
+computations and data processing.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+import multiprocessing<br><br>
+def task():<br>
+&nbsp;&nbsp;print("Process is running")<br><br>
+p1 = multiprocessing.Process(target=task)<br>
+p2 = multiprocessing.Process(target=task)<br><br>
+p1.start()<br>
+p2.start()
+</code>
+
+<p><b>Output:</b><br>
+Process is running<br>
+Process is running
+</p>
+
+<hr>
 
 
