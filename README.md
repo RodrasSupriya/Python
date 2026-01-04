@@ -895,6 +895,242 @@ Membership operators check the presence of keys.
 
 <hr>
 
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Loops & Conditional Statements
+</h1>
+
+<p align="center">
+  for • while • if-elif-else • break • enumerate
+</p>
+
+<hr>
+
+<h2>🔁 For Loop</h2>
+<p>
+A <b>for loop</b> is used to iterate over a sequence such as a list, tuple,
+string, set, or dictionary.
+</p>
+
+<h3>📌 Syntax</h3>
+<code>
+for variable in sequence:<br>
+&nbsp;&nbsp;statement
+</code>
+
+<h3>📘 Example</h3>
+<code>nums = [1, 2, 3]</code><br>
+<code>for n in nums:</code><br>
+<code>&nbsp;&nbsp;print(n)</code>
+
+<hr>
+
+<h2>🔂 Nested For Loop (Two Loops)</h2>
+<p>
+A nested loop is a loop inside another loop.
+</p>
+
+<code>
+for i in range(1, 3):<br>
+&nbsp;&nbsp;for j in range(1, 3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i, j)
+</code>
+
+<hr>
+
+<h2>🔃 Nested For Loop (Three Loops)</h2>
+
+<code>
+for i in range(1, 3):<br>
+&nbsp;&nbsp;for j in range(1, 3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for k in range(1, 3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i, j, k)
+</code>
+
+<hr>
+
+<h2>🔀 Conditional Statements</h2>
+<p>
+Conditional statements are used to make decisions based on conditions.
+</p>
+
+<h3>✔ if Statement</h3>
+<code>
+x = 10<br>
+if x &gt; 5:<br>
+&nbsp;&nbsp;print("Greater")
+</code>
+
+<h3>✔ if-else Statement</h3>
+<code>
+x = 3<br>
+if x &gt; 5:<br>
+&nbsp;&nbsp;print("Greater")<br>
+else:<br>
+&nbsp;&nbsp;print("Smaller")
+</code>
+
+<h3>✔ if-elif-else Statement</h3>
+<code>
+x = 0<br>
+if x &gt; 0:<br>
+&nbsp;&nbsp;print("Positive")<br>
+elif x == 0:<br>
+&nbsp;&nbsp;print("Zero")<br>
+else:<br>
+&nbsp;&nbsp;print("Negative")
+</code>
+
+<hr>
+
+<h2>🔄 For Loop with Collections</h2>
+
+<h3>📋 For Loop with List</h3>
+<code>
+nums = [10, 20, 30]<br>
+for n in nums:<br>
+&nbsp;&nbsp;print(n)
+</code>
+
+<h3>🔤 For Loop with String</h3>
+<code>
+name = "Python"<br>
+for ch in name:<br>
+&nbsp;&nbsp;print(ch)
+</code>
+
+<h3>📦 For Loop with Tuple</h3>
+<code>
+t = (1, 2, 3)<br>
+for i in t:<br>
+&nbsp;&nbsp;print(i)
+</code>
+
+<h3>🧺 For Loop with Set</h3>
+<code>
+s = {1, 2, 3}<br>
+for i in s:<br>
+&nbsp;&nbsp;print(i)
+</code>
+
+<h3>🗂 For Loop with Dictionary</h3>
+<code>
+d = {"a": 1, "b": 2}<br>
+for key in d:<br>
+&nbsp;&nbsp;print(key, d[key])
+</code>
+
+<hr>
+
+<h2>⛔ Break Statement</h2>
+<p>
+The <b>break</b> statement is used to stop the loop immediately
+when a condition is met.
+</p>
+
+<h3>Break in For Loop</h3>
+<code>
+nums = [1, 2, 3, 4]<br>
+for n in nums:<br>
+&nbsp;&nbsp;if n == 3:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;print(n)
+</code>
+
+<h3>Break in While Loop</h3>
+<code>
+i = 1<br>
+while i &lt;= 5:<br>
+&nbsp;&nbsp;if i == 4:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;print(i)<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<hr>
+
+<h2>🔁 While Loop</h2>
+<p>
+A <b>while loop</b> executes a block of code repeatedly
+as long as a condition is true.
+</p>
+
+<h3>📘 Example</h3>
+<code>
+i = 1<br>
+while i &lt;= 3:<br>
+&nbsp;&nbsp;print(i)<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<hr>
+
+<h2>🔄 While Loop with Collections</h2>
+
+<h3>List</h3>
+<code>
+nums = [10, 20, 30]<br>
+i = 0<br>
+while i &lt; len(nums):<br>
+&nbsp;&nbsp;print(nums[i])<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<h3>String</h3>
+<code>
+name = "Hi"<br>
+i = 0<br>
+while i &lt; len(name):<br>
+&nbsp;&nbsp;print(name[i])<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<h3>Tuple</h3>
+<code>
+t = (1, 2)<br>
+i = 0<br>
+while i &lt; len(t):<br>
+&nbsp;&nbsp;print(t[i])<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<h3>Set (converted to list)</h3>
+<code>
+s = {1, 2}<br>
+lst = list(s)<br>
+i = 0<br>
+while i &lt; len(lst):<br>
+&nbsp;&nbsp;print(lst[i])<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<h3>Dictionary</h3>
+<code>
+d = {"a": 1, "b": 2}<br>
+keys = list(d.keys())<br>
+i = 0<br>
+while i &lt; len(keys):<br>
+&nbsp;&nbsp;print(keys[i], d[keys[i]])<br>
+&nbsp;&nbsp;i += 1
+</code>
+
+<hr>
+
+<h2>🔢 Enumerate Function</h2>
+<p>
+The <b>enumerate()</b> function returns both the index and value
+while looping.
+</p>
+
+<h3>Example</h3>
+<code>
+names = ["A", "B", "C"]<br>
+for index, value in enumerate(names):<br>
+&nbsp;&nbsp;print(index, value)
+</code>
+
+<hr>
+
 
 
 
