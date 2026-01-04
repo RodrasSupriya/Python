@@ -497,18 +497,403 @@ Split converts a string into a list, while join converts a list into a string.
 <code>"-".join(chars)</code> → <b>a-b-c</b>
 
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Tuple
+</h1>
 
-<h2>🎯 Outcome</h2>
-<p>
-Understanding list operations helps in efficient data storage,
-modification, and real-world problem solving using Python.
+<p align="center">
+  Definition • Indexing • Slicing • Skipping • Functions • Packing & Unpacking
 </p>
 
 <hr>
 
-<p align="center">
-  ⭐ <b>Lists are a core and powerful data structure in Python.</b>
+<h2>📌 Tuple Definition</h2>
+<p>
+A tuple is an ordered collection of elements enclosed in parentheses <code>()</code>.
+Tuples can store multiple values of different data types.
 </p>
+
+<p><b>Example:</b></p>
+<code>t = (10, 20, 30, 40)</code>
+
+<hr>
+
+<h2>🔒 Mutable or Immutable</h2>
+<p>
+Tuples are <b>immutable</b>, which means their elements cannot be changed
+after creation.
+</p>
+
+<p><b>Example:</b></p>
+<code>t = (10, 20, 30)</code><br>
+<code>t[0] = 50</code> → ❌ Error (Modification not allowed)
+
+<hr>
+
+<h2>📍 Indexing</h2>
+<p>
+Indexing is used to access elements using their position.
+Index starts from <b>0</b>.
+</p>
+
+<p><b>Example:</b></p>
+<code>t = (10, 20, 30, 40)</code><br>
+<code>t[0]</code> → <b>10</b><br>
+<code>t[-1]</code> → <b>40</b>
+
+<hr>
+
+<h2>✂ Slicing</h2>
+<p>
+Slicing extracts a portion of the tuple using start and end index.
+The end index is excluded.
+</p>
+
+<p><b>Example:</b></p>
+<code>t = (10, 20, 30, 40)</code><br>
+<code>t[1:3]</code> → <b>(20, 30)</b>
+
+<hr>
+
+<h2>⏩ Skipping</h2>
+<p>
+Skipping extracts elements by jumping a fixed number of steps.
+</p>
+
+<p><b>Example:</b></p>
+<code>t = (10, 20, 30, 40)</code><br>
+<code>t[0:4:2]</code> → <b>(10, 30)</b>
+
+<hr>
+
+<h2>🧰 Tuple Built-in Functions</h2>
+
+<ul>
+  <li>
+    <b>count()</b> – Counts how many times a value appears  
+    <br>
+    <code>t = (1, 2, 1, 3)</code><br>
+    <code>t.count(1)</code> → <b>2</b>
+  </li>
+
+  <li>
+    <b>index()</b> – Returns index of first occurrence  
+    <br>
+    <code>t = (10, 20, 30)</code><br>
+    <code>t.index(20)</code> → <b>1</b>
+  </li>
+</ul>
+
+<hr>
+
+<h2>📦 Packing and Unpacking</h2>
+<p>
+Packing means storing multiple values into a tuple.
+Unpacking means extracting values from a tuple into variables.
+</p>
+
+<p><b>Packing Example:</b></p>
+<code>t = 1, 2, 3</code>
+
+<p><b>Unpacking Example:</b></p>
+<code>a, b, c = t</code><br>
+<b>Result:</b> a = 1, b = 2, c = 3
+
+<hr>
+
+<h2>🔢 Product (Cartesian Product) in Tuple</h2>
+<p>
+Product combines each element of one tuple with every element of another tuple.
+</p>
+
+<p><b>Example:</b></p>
+<code>t1 = (1, 2)</code><br>
+<code>t2 = ('a', 'b')</code><br>
+<b>Result:</b> (1,'a'), (1,'b'), (2,'a'), (2,'b')
+
+<hr>
+
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Set
+</h1>
+
+<p align="center">
+  Definition • Mutability • Functions • Set Operations
+</p>
+
+<hr>
+
+<h2>📌 Set Definition</h2>
+<p>
+A set is an unordered collection of unique elements enclosed in curly braces <code>{}</code>.
+Sets do not allow duplicate values.
+</p>
+
+<p><b>Example:</b></p>
+<code>s = {10, 20, 30, 40}</code>
+
+<hr>
+
+<h2>🔒 Mutable or Immutable</h2>
+<p>
+Sets are <b>mutable</b>, which means elements can be added or removed
+after creation.
+</p>
+
+<p><b>Example:</b></p>
+<code>s = {1, 2, 3}</code><br>
+<code>s.add(4)</code> → <b>{1, 2, 3, 4}</b>
+
+<hr>
+
+<h2>📍 Indexing, Slicing & Skipping</h2>
+<p>
+Sets do <b>not support indexing, slicing, or skipping</b> because they are unordered.
+Elements do not have fixed positions.
+</p>
+
+<p><b>Example:</b></p>
+<code>s = {10, 20, 30}</code><br>
+<code>s[0]</code> → ❌ Error (Indexing not allowed)
+
+<hr>
+
+<h2>⚠ Duplicate Elements</h2>
+<p>
+Sets automatically remove duplicate values.
+</p>
+
+<p><b>Example:</b></p>
+<code>s = {1, 1, 2, 2, 3}</code><br>
+<b>Result:</b> {1, 2, 3}
+
+<hr>
+
+<h2>🧰 Set Built-in Functions</h2>
+
+<ul>
+  <li>
+    <b>add()</b> – Adds a single element  
+    <br>
+    <code>s = {10, 20}</code><br>
+    <code>s.add(30)</code> → <b>{10, 20, 30}</b>
+  </li>
+
+  <li>
+    <b>update()</b> – Adds multiple elements  
+    <br>
+    <code>s = {10, 20}</code><br>
+    <code>s.update([30, 40])</code> → <b>{10, 20, 30, 40}</b>
+  </li>
+
+  <li>
+    <b>pop()</b> – Removes a random element  
+    <br>
+    <code>s = {10, 20, 30}</code><br>
+    <code>s.pop()</code>
+  </li>
+
+  <li>
+    <b>remove()</b> – Removes a specific element (error if not found)  
+    <br>
+    <code>s = {10, 20, 30}</code><br>
+    <code>s.remove(20)</code> → <b>{10, 30}</b>
+  </li>
+
+  <li>
+    <b>discard()</b> – Removes element safely (no error if missing)  
+    <br>
+    <code>s = {10, 20}</code><br>
+    <code>s.discard(50)</code>
+  </li>
+</ul>
+
+<hr>
+
+<h2>🔗 Set Operations</h2>
+
+<ul>
+  <li>
+    <b>union()</b> – Combines elements from both sets  
+    <br>
+    <code>a = {1, 2}</code><br>
+    <code>b = {2, 3}</code><br>
+    <code>a.union(b)</code> → <b>{1, 2, 3}</b>
+  </li>
+
+  <li>
+    <b>intersection()</b> – Returns common elements  
+    <br>
+    <code>a.intersection(b)</code> → <b>{2}</b>
+  </li>
+</ul>
+
+<hr>
+
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Dictionary
+</h1>
+
+<p align="center">
+  Definition • Mutability • Keys & Values • Functions • Operations
+</p>
+
+<hr>
+
+<h2>📌 Dictionary Definition</h2>
+<p>
+A dictionary is a collection of <b>key-value</b> pairs enclosed in curly braces <code>{}</code>.
+Each key is mapped to a value using a colon <code>:</code>.
+</p>
+
+<p><b>Example:</b></p>
+<code>fruits = {"apple": 100, "banana": 50}</code>
+
+<hr>
+
+<h2>🔒 Mutable Nature</h2>
+<p>
+Dictionaries are <b>mutable</b>, meaning values can be modified,
+added, or removed after creation.
+</p>
+
+<p><b>Example:</b></p>
+<code>fruits["apple"] = 500</code><br>
+<b>Result:</b> {"apple": 500, "banana": 50}
+
+<hr>
+
+<h2>🔑 Keys and Values Rules</h2>
+<p>
+Rules for keys and values in a dictionary:
+</p>
+
+<ul>
+  <li>✔ <b>Keys must be unique</b></li>
+  <li>✔ <b>Keys must be immutable</b> (int, float, string, tuple)</li>
+  <li>❌ Mutable types (list, set, dict) <b>cannot be keys</b></li>
+  <li>✔ <b>Values can be any data type</b> (int, list, tuple, dict, set)</li>
+</ul>
+
+<p><b>Example:</b></p>
+<code>data = {"id": 1, "marks": [90, 85]}</code>
+
+<hr>
+
+<h2>📍 Indexing, Slicing & Skipping</h2>
+<p>
+Dictionaries do <b>not support indexing, slicing, or skipping</b>
+because they are unordered collections.
+</p>
+
+<p><b>Example:</b></p>
+<code>fruits[0]</code> → ❌ Error (Indexing not supported)
+
+<hr>
+
+<h2>⚠ Duplicate Keys</h2>
+<p>
+Duplicate keys are not allowed. If repeated, the last value is stored.
+</p>
+
+<p><b>Example:</b></p>
+<code>d = {"a": 1, "a": 2}</code><br>
+<b>Result:</b> {"a": 2}
+
+<hr>
+
+<h2>🚫 index() and count()</h2>
+<p>
+Functions like <code>index()</code> and <code>count()</code> are
+<b>not applicable</b> for dictionaries.
+</p>
+
+<hr>
+
+<h2>✏ Manual Update & Delete</h2>
+
+<p><b>Manual Update:</b></p>
+<code>fruits["apple"] = 500</code>
+
+<p><b>Manual Delete:</b></p>
+<code>del fruits["banana"]</code>
+
+<hr>
+
+<h2>🧰 Dictionary Built-in Functions</h2>
+
+<ul>
+  <li>
+    <b>get()</b> – Gets value safely  
+    <br><code>fruits.get("apple")</code> → <b>500</b>
+  </li>
+
+  <li>
+    <b>update()</b> – Updates dictionary  
+    <br><code>fruits.update({"orange": 80})</code>
+  </li>
+
+  <li>
+    <b>pop()</b> – Removes specified key  
+    <br><code>fruits.pop("apple")</code>
+  </li>
+
+  <li>
+    <b>popitem()</b> – Removes last inserted item  
+    <br><code>fruits.popitem()</code>
+  </li>
+
+  <li>
+    <b>keys()</b> – Returns all keys  
+    <br><code>fruits.keys()</code>
+  </li>
+
+  <li>
+    <b>values()</b> – Returns all values  
+    <br><code>fruits.values()</code>
+  </li>
+
+  <li>
+    <b>items()</b> – Returns key-value pairs  
+    <br><code>fruits.items()</code>
+  </li>
+
+  <li>
+    <b>copy()</b> – Creates a shallow copy  
+    <br><code>new_fruits = fruits.copy()</code>
+  </li>
+
+  <li>
+    <b>clear()</b> – Removes all elements  
+    <br><code>fruits.clear()</code>
+  </li>
+</ul>
+
+<hr>
+
+<h2>🔍 Membership Test</h2>
+<p>
+Membership operators check the presence of keys.
+</p>
+
+<p><b>Example:</b></p>
+<code>"apple" in fruits</code> → <b>True</b><br>
+<code>"banana" not in fruits</code> → <b>True</b>
+
+<hr>
+
+<h2>🆕 Creating a Dictionary</h2>
+
+<p><b>Using Curly Braces:</b></p>
+<code>d1 = {"name": "Alex", "age": 25}</code>
+
+<p><b>Using dict():</b></p>
+<code>d2 = dict(city="Delhi", pincode=500001)</code>
+
+<hr>
 
 
 
