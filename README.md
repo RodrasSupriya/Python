@@ -1207,8 +1207,231 @@ for index, value in enumerate(names):<br>
 
 <hr>
 
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Functions
+</h1>
 
+<p align="center">
+  Definition • Types • Variables • Arguments • Lambda
+</p>
 
+<hr>
+
+<h2>📌 Function Definition</h2>
+<p>
+A <b>function</b> is a block of reusable code that performs a specific task.
+It helps reduce repetition and improves code readability.
+</p>
+
+<hr>
+
+<h2>🔁 Reusability</h2>
+<p>
+Once a function is defined, it can be called multiple times
+without rewriting the code.
+</p>
+
+<hr>
+
+<h2>🧩 Types of Functions</h2>
+<ul>
+  <li><b>Built-in Functions:</b> Predefined functions provided by Python
+      (e.g., <code>print()</code>, <code>len()</code>, <code>sum()</code>)</li>
+  <li><b>User-Defined Functions:</b> Functions created by the programmer</li>
+</ul>
+
+<hr>
+
+<h2>👨‍💻 User-Defined Functions</h2>
+
+<h3>1️⃣ Non-Parameter Function</h3>
+<p>
+A function that does not accept any arguments.
+</p>
+
+<code>
+def greet():<br>
+&nbsp;&nbsp;print("Welcome to Python")<br><br>
+greet()
+</code>
+
+<p><b>Output:</b> Welcome to Python</p>
+
+<hr>
+
+<h3>2️⃣ Parameter Function</h3>
+<p>
+A function that accepts parameters to perform operations.
+</p>
+
+<code>
+def add(a, b):<br>
+&nbsp;&nbsp;print(a + b)<br><br>
+add(10, 20)
+</code>
+
+<p><b>Output:</b> 30</p>
+
+<hr>
+
+<h2>🌍 Global Variable</h2>
+<p>
+A <b>global variable</b> is declared outside a function and can be accessed
+inside the function.
+</p>
+
+<code>
+x = 10<br><br>
+def show():<br>
+&nbsp;&nbsp;print(x)<br><br>
+show()
+</code>
+
+<p><b>Output:</b> 10</p>
+
+<hr>
+
+<h2>📍 Local Variable</h2>
+<p>
+A <b>local variable</b> is declared inside a function and can be used
+only within that function.
+</p>
+
+<code>
+def demo():<br>
+&nbsp;&nbsp;y = 5<br>
+&nbsp;&nbsp;print(y)<br><br>
+demo()
+</code>
+
+<p><b>Output:</b> 5</p>
+
+<hr>
+
+<h2>🔓 Accessing and Modifying Global Variable</h2>
+<p>
+The <b>global</b> keyword allows modification of a global variable
+inside a function.
+</p>
+
+<code>
+x = 5<br><br>
+def update():<br>
+&nbsp;&nbsp;global x<br>
+&nbsp;&nbsp;x = 20<br><br>
+update()<br>
+print(x)
+</code>
+
+<p><b>Output:</b> 20</p>
+
+<hr>
+
+<h2>🔙 return Keyword</h2>
+<p>
+The <b>return</b> keyword sends a value back to the function caller
+and ends function execution.
+</p>
+
+<code>
+def square(n):<br>
+&nbsp;&nbsp;return n * n<br><br>
+result = square(4)<br>
+print(result)
+</code>
+
+<p><b>Output:</b> 16</p>
+
+<hr>
+
+<h2>🧱 Modularization Using Functions</h2>
+<p>
+Modularization means breaking a large program into smaller,
+independent functions for better structure and maintenance.
+</p>
+
+<code>
+def login():<br>
+&nbsp;&nbsp;print("Login Successful")<br><br>
+def dashboard():<br>
+&nbsp;&nbsp;print("Dashboard Loaded")<br><br>
+login()<br>
+dashboard()
+</code>
+
+<p><b>Output:</b><br>
+Login Successful<br>
+Dashboard Loaded
+</p>
+
+<hr>
+
+<h2>📥 Function Arguments</h2>
+
+<h3>📌 Positional Arguments</h3>
+<p>
+Arguments are passed based on their position.
+</p>
+
+<code>
+def info(name, age):<br>
+&nbsp;&nbsp;print(name, age)<br><br>
+info("Alex", 25)
+</code>
+
+<p><b>Output:</b> Alex 25</p>
+
+<hr>
+
+<h3>📌 Keyword Arguments</h3>
+<p>
+Arguments are passed using parameter names.
+</p>
+
+<code>
+info(age=30, name="John")
+</code>
+
+<p><b>Output:</b> John 30</p>
+
+<hr>
+
+<h3>📌 Arbitrary Arguments (<code>*args</code>)</h3>
+<p>
+Used when the number of arguments is unknown.
+</p>
+
+<code>
+def total(*nums):<br>
+&nbsp;&nbsp;print(sum(nums))<br><br>
+total(10, 20, 30)
+</code>
+
+<p><b>Output:</b> 60</p>
+
+<hr>
+
+<h2>⚡ Lambda Function</h2>
+<p>
+A <b>lambda function</b> is a small anonymous function written in a single line.
+It is mainly used for short operations.
+</p>
+
+<h3>📌 Syntax</h3>
+<code>
+lambda arguments : expression
+</code>
+
+<h3>📘 Example</h3>
+<code>
+add = lambda a, b: a + b<br>
+print(add(5, 3))
+</code>
+
+<p><b>Output:</b> 8</p>
+
+<hr>
 
 
 
