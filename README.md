@@ -2061,18 +2061,11 @@ s.area()
 
 <hr>
 
-<h2>🎯 Outcome</h2>
-<p>
-Understanding OOPS concepts helps in designing
-modular, reusable, and scalable Python applications.
-These principles are widely used in real-world software development.
-</p>
-
 <hr>
 
-<p align="center">
+<h1><p align="center">
   Multithreading • Multiprocessing
-</p>
+</p></h1>
 
 <hr>
 
