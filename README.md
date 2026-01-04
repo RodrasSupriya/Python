@@ -915,25 +915,42 @@ string, set, or dictionary.
 <h3>📌 Syntax</h3>
 <code>
 for variable in sequence:<br>
-&nbsp;&nbsp;statement
+&nbsp;&nbsp;statements
 </code>
 
 <h3>📘 Example</h3>
-<code>nums = [1, 2, 3]</code><br>
-<code>for n in nums:</code><br>
-<code>&nbsp;&nbsp;print(n)</code>
+<code>
+nums = [1, 2, 3]<br>
+for n in nums:<br>
+&nbsp;&nbsp;print(n)
+</code>
+
+<p><b>Result:</b></p>
+<code>
+1<br>
+2<br>
+3
+</code>
 
 <hr>
 
 <h2>🔂 Nested For Loop (Two Loops)</h2>
 <p>
-A nested loop is a loop inside another loop.
+A nested for loop is a loop inside another loop.
 </p>
 
 <code>
 for i in range(1, 3):<br>
 &nbsp;&nbsp;for j in range(1, 3):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;print(i, j)
+</code>
+
+<p><b>Result:</b></p>
+<code>
+1 1<br>
+1 2<br>
+2 1<br>
+2 2
 </code>
 
 <hr>
@@ -947,6 +964,18 @@ for i in range(1, 3):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i, j, k)
 </code>
 
+<p><b>Result:</b></p>
+<code>
+1 1 1<br>
+1 1 2<br>
+1 2 1<br>
+1 2 2<br>
+2 1 1<br>
+2 1 2<br>
+2 2 1<br>
+2 2 2
+</code>
+
 <hr>
 
 <h2>🔀 Conditional Statements</h2>
@@ -958,8 +987,10 @@ Conditional statements are used to make decisions based on conditions.
 <code>
 x = 10<br>
 if x &gt; 5:<br>
-&nbsp;&nbsp;print("Greater")
+&nbsp;&nbsp;print("Greater than 5")
 </code>
+
+<p><b>Result:</b> Greater than 5</p>
 
 <h3>✔ if-else Statement</h3>
 <code>
@@ -969,6 +1000,8 @@ if x &gt; 5:<br>
 else:<br>
 &nbsp;&nbsp;print("Smaller")
 </code>
+
+<p><b>Result:</b> Smaller</p>
 
 <h3>✔ if-elif-else Statement</h3>
 <code>
@@ -981,48 +1014,64 @@ else:<br>
 &nbsp;&nbsp;print("Negative")
 </code>
 
+<p><b>Result:</b> Zero</p>
+
 <hr>
 
-<h2>🔄 For Loop with Collections</h2>
+<h2>🔄 For Loop with Data Types</h2>
 
-<h3>📋 For Loop with List</h3>
+<h3>📋 List</h3>
 <code>
 nums = [10, 20, 30]<br>
 for n in nums:<br>
 &nbsp;&nbsp;print(n)
 </code>
 
-<h3>🔤 For Loop with String</h3>
+<p><b>Result:</b> 10 20 30</p>
+
+<h3>🔤 String</h3>
 <code>
 name = "Python"<br>
 for ch in name:<br>
 &nbsp;&nbsp;print(ch)
 </code>
 
-<h3>📦 For Loop with Tuple</h3>
+<p><b>Result:</b> P y t h o n</p>
+
+<h3>📦 Tuple</h3>
 <code>
 t = (1, 2, 3)<br>
 for i in t:<br>
 &nbsp;&nbsp;print(i)
 </code>
 
-<h3>🧺 For Loop with Set</h3>
+<p><b>Result:</b> 1 2 3</p>
+
+<h3>🧺 Set</h3>
 <code>
-s = {1, 2, 3}<br>
+s = {4, 5, 6}<br>
 for i in s:<br>
 &nbsp;&nbsp;print(i)
 </code>
 
-<h3>🗂 For Loop with Dictionary</h3>
+<p><b>Result:</b> 4 5 6 (order may vary)</p>
+
+<h3>🗂 Dictionary</h3>
 <code>
 d = {"a": 1, "b": 2}<br>
 for key in d:<br>
 &nbsp;&nbsp;print(key, d[key])
 </code>
 
+<p><b>Result:</b></p>
+<code>
+a 1<br>
+b 2
+</code>
+
 <hr>
 
-<h2>⛔ Break Statement</h2>
+<h2>⛔ break Statement</h2>
 <p>
 The <b>break</b> statement is used to stop the loop immediately
 when a condition is met.
@@ -1037,6 +1086,8 @@ for n in nums:<br>
 &nbsp;&nbsp;print(n)
 </code>
 
+<p><b>Result:</b> 1 2</p>
+
 <h3>Break in While Loop</h3>
 <code>
 i = 1<br>
@@ -1046,6 +1097,8 @@ while i &lt;= 5:<br>
 &nbsp;&nbsp;print(i)<br>
 &nbsp;&nbsp;i += 1
 </code>
+
+<p><b>Result:</b> 1 2 3</p>
 
 <hr>
 
@@ -1063,40 +1116,48 @@ while i &lt;= 3:<br>
 &nbsp;&nbsp;i += 1
 </code>
 
+<p><b>Result:</b> 1 2 3</p>
+
 <hr>
 
-<h2>🔄 While Loop with Collections</h2>
+<h2>🔄 While Loop with Data Types</h2>
 
 <h3>List</h3>
 <code>
-nums = [10, 20, 30]<br>
+nums = [10, 20]<br>
 i = 0<br>
 while i &lt; len(nums):<br>
 &nbsp;&nbsp;print(nums[i])<br>
 &nbsp;&nbsp;i += 1
 </code>
 
+<p><b>Result:</b> 10 20</p>
+
 <h3>String</h3>
 <code>
-name = "Hi"<br>
+text = "Hi"<br>
 i = 0<br>
-while i &lt; len(name):<br>
-&nbsp;&nbsp;print(name[i])<br>
+while i &lt; len(text):<br>
+&nbsp;&nbsp;print(text[i])<br>
 &nbsp;&nbsp;i += 1
 </code>
 
+<p><b>Result:</b> H i</p>
+
 <h3>Tuple</h3>
 <code>
-t = (1, 2)<br>
+t = (7, 8)<br>
 i = 0<br>
 while i &lt; len(t):<br>
 &nbsp;&nbsp;print(t[i])<br>
 &nbsp;&nbsp;i += 1
 </code>
 
-<h3>Set (converted to list)</h3>
+<p><b>Result:</b> 7 8</p>
+
+<h3>Set (Converted to List)</h3>
 <code>
-s = {1, 2}<br>
+s = {9, 10}<br>
 lst = list(s)<br>
 i = 0<br>
 while i &lt; len(lst):<br>
@@ -1104,9 +1165,11 @@ while i &lt; len(lst):<br>
 &nbsp;&nbsp;i += 1
 </code>
 
+<p><b>Result:</b> 9 10</p>
+
 <h3>Dictionary</h3>
 <code>
-d = {"a": 1, "b": 2}<br>
+d = {"x": 1, "y": 2}<br>
 keys = list(d.keys())<br>
 i = 0<br>
 while i &lt; len(keys):<br>
@@ -1114,12 +1177,18 @@ while i &lt; len(keys):<br>
 &nbsp;&nbsp;i += 1
 </code>
 
+<p><b>Result:</b></p>
+<code>
+x 1<br>
+y 2
+</code>
+
 <hr>
 
 <h2>🔢 Enumerate Function</h2>
 <p>
 The <b>enumerate()</b> function returns both the index and value
-while looping.
+while iterating over a sequence.
 </p>
 
 <h3>Example</h3>
@@ -1129,15 +1198,19 @@ for index, value in enumerate(names):<br>
 &nbsp;&nbsp;print(index, value)
 </code>
 
+<p><b>Result:</b></p>
+<code>
+0 A<br>
+1 B<br>
+2 C
+</code>
+
 <hr>
 
 
 
 
- 
- 
 
-<
 
 
 
