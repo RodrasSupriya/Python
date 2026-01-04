@@ -335,6 +335,180 @@ Uppercase letters have lower ASCII values than lowercase letters.
 </p>
 
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Lists
+</h1>
+
+<p align="center">
+  Memory • Indexing • Slicing • Methods • Copying
+</p>
+
+<hr>
+
+<h2>📦 Lists in Python</h2>
+<p>
+A list is a mutable, ordered collection used to store multiple values
+in a single variable. Lists can store different data types.
+</p>
+
+<p><b>Example:</b></p>
+<code>nums = [10, 20, 30, 40]</code>
+
+<hr>
+
+<h2>🧠 Memory Allocation</h2>
+<p>
+Lists store references in memory. When one variable is assigned to another,
+both point to the same memory location.
+</p>
+
+<p><b>Example:</b></p>
+<code>a = [1, 2, 3]</code><br>
+<code>b = a</code><br>
+<code>b.append(4)</code><br>
+<b>Result:</b> a → [1, 2, 3, 4], b → [1, 2, 3, 4]
+
+<hr>
+
+<h2>📍 Indexing</h2>
+<p>
+Indexing is used to access elements using their position.
+Index starts from <b>0</b>.
+</p>
+
+<p><b>Example:</b></p>
+<code>nums = [10, 20, 30, 40]</code><br>
+<code>nums[0]</code> → <b>10</b><br>
+<code>nums[-1]</code> → <b>40</b>
+
+<hr>
+
+<h2>✂ Slicing</h2>
+<p>
+Slicing extracts a portion of a list using start and end index.
+The end index is excluded.
+</p>
+
+<p><b>Example:</b></p>
+<code>nums = [10, 20, 30, 40]</code><br>
+<code>nums[1:3]</code> → <b>[20, 30]</b>
+
+<hr>
+
+<h2>⏩ Skipping</h2>
+<p>
+Skipping extracts elements by jumping a fixed step value.
+</p>
+
+<p><b>Example:</b></p>
+<code>nums = [10, 20, 30, 40]</code><br>
+<code>nums[0:4:2]</code> → <b>[10, 30]</b>
+
+<hr>
+
+<h2>🧰 List Built-in Functions</h2>
+
+<ul>
+  <li><b>append()</b> – Adds an element at the end  
+    <br><code>nums = [10, 20]</code><br>
+    <code>nums.append(30)</code> → <b>[10, 20, 30]</b>
+  </li>
+
+  <li><b>extend()</b> – Adds multiple elements  
+    <br><code>nums = [10, 20]</code><br>
+    <code>nums.extend([30, 40])</code> → <b>[10, 20, 30, 40]</b>
+  </li>
+
+  <li><b>insert()</b> – Inserts element at a given index  
+    <br><code>nums = [10, 30]</code><br>
+    <code>nums.insert(1, 20)</code> → <b>[10, 20, 30]</b>
+  </li>
+
+  <li><b>pop()</b> – Removes element by index  
+    <br><code>nums = [10, 20, 30]</code><br>
+    <code>nums.pop(1)</code> → <b>[10, 30]</b>
+  </li>
+
+  <li><b>remove()</b> – Removes a specific value  
+    <br><code>nums = [10, 20, 30]</code><br>
+    <code>nums.remove(20)</code> → <b>[10, 30]</b>
+  </li>
+
+  <li><b>count()</b> – Counts occurrences of a value  
+    <br><code>nums = [1, 1, 2, 3]</code><br>
+    <code>nums.count(1)</code> → <b>2</b>
+  </li>
+
+  <li><b>index()</b> – Returns index of a value  
+    <br><code>nums = [10, 20, 30]</code><br>
+    <code>nums.index(30)</code> → <b>2</b>
+  </li>
+
+  <li><b>reverse()</b> – Reverses the list  
+    <br><code>nums = [10, 20, 30]</code><br>
+    <code>nums.reverse()</code> → <b>[30, 20, 10]</b>
+  </li>
+
+  <li><b>sort()</b> – Sorts the list in ascending order  
+    <br><code>nums = [30, 10, 20]</code><br>
+    <code>nums.sort()</code> → <b>[10, 20, 30]</b>
+  </li>
+
+  <li><b>clear()</b> – Removes all elements  
+    <br><code>nums = [10, 20]</code><br>
+    <code>nums.clear()</code> → <b>[]</b>
+  </li>
+
+  <li><b>copy()</b> – Creates a shallow copy  
+    <br><code>nums = [10, 20]</code><br>
+    <code>new_nums = nums.copy()</code>
+  </li>
+</ul>
+
+<hr>
+
+<h2>📄 Shallow Copy vs Deep Copy</h2>
+
+<ul>
+  <li><b>Shallow Copy:</b> Copies references of nested objects  
+    <br><code>import copy</code><br>
+    <code>list1 = [[1, 2], [3, 4]]</code><br>
+    <code>list2 = copy.copy(list1)</code>
+  </li>
+
+  <li><b>Deep Copy:</b> Copies all nested objects independently  
+    <br><code>list3 = copy.deepcopy(list1)</code>
+  </li>
+</ul>
+
+<hr>
+
+<h2>🔗 Split and Join</h2>
+<p>
+Split converts a string into a list, while join converts a list into a string.
+</p>
+
+<p><b>Examples:</b></p>
+<code>text = "a,b,c"</code><br>
+<code>text.split(",")</code> → <b>['a', 'b', 'c']</b><br><br>
+
+<code>chars = ['a', 'b', 'c']</code><br>
+<code>"-".join(chars)</code> → <b>a-b-c</b>
+
+<hr>
+
+<h2>🎯 Outcome</h2>
+<p>
+Understanding list operations helps in efficient data storage,
+modification, and real-world problem solving using Python.
+</p>
+
+<hr>
+
+<p align="center">
+  ⭐ <b>Lists are a core and powerful data structure in Python.</b>
+</p>
 
 
 
