@@ -205,6 +205,113 @@ functionality and improve development efficiency.
   <li>📈 <b>Pandas:</b> Data analysis and manipulation</li>
 </ul>
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python String Methods
+</h1>
+
+<p align="center">
+  Indexing • Slicing • Built-in Functions • Examples
+</p>
+
+<hr>
+
+<h2>🔤 Strings in Python</h2>
+<p>
+Strings are sequences of characters enclosed in quotes.
+They are <b>immutable</b>, meaning they cannot be changed after creation.
+</p>
+
+<hr>
+
+<h2>📍 Indexing, Slicing & Skipping</h2>
+<ul>
+  <li><b>Indexing:</b> <code>s = "Python"</code> → <code>s[0]</code> → <b>P</b></li>
+  <li><b>Slicing:</b> <code>s[0:4]</code> → <b>Pyth</b></li>
+  <li><b>Skipping:</b> <code>s[0:6:2]</code> → <b>Pto</b></li>
+</ul>
+
+<hr>
+
+<h2>🧰 Built-in String Functions (with Examples)</h2>
+
+<ul>
+  <li>🔠 <b>title()</b> – Capitalizes first letter of each word  
+    <br><code>"hello world".title()</code> → <b>Hello World</b>
+  </li>
+
+  <li>🔡 <b>lower()</b> – Converts to lowercase  
+    <br><code>"PYTHON".lower()</code> → <b>python</b>
+  </li>
+
+  <li>🔠 <b>upper()</b> – Converts to uppercase  
+    <br><code>"python".upper()</code> → <b>PYTHON</b>
+  </li>
+
+  <li>✔ <b>isupper()</b> – Checks if all letters are uppercase  
+    <br><code>"PYTHON".isupper()</code> → <b>True</b>
+  </li>
+
+  <li>✔ <b>islower()</b> – Checks if all letters are lowercase  
+    <br><code>"python".islower()</code> → <b>True</b>
+  </li>
+
+  <li>🔤 <b>isalpha()</b> – Checks only alphabets  
+    <br><code>"Python".isalpha()</code> → <b>True</b>
+  </li>
+
+  <li>🔢 <b>isnumeric()</b> – Checks only numbers  
+    <br><code>"123".isnumeric()</code> → <b>True</b>
+  </li>
+
+  <li>🔠➕🔢 <b>isalnum()</b> – Checks alphabets & numbers  
+    <br><code>"Py123".isalnum()</code> → <b>True</b>
+  </li>
+
+  <li>▶ <b>startswith()</b> – Checks starting characters  
+    <br><code>"Python".startswith("Py")</code> → <b>True</b>
+  </li>
+
+  <li>⏹ <b>endswith()</b> – Checks ending characters  
+    <br><code>"Python".endswith("on")</code> → <b>True</b>
+  </li>
+
+  <li>🔄 <b>replace()</b> – Replaces substring  
+    <br><code>"Hello World".replace("World","Python")</code> → <b>Hello Python</b>
+  </li>
+
+  <li>📍 <b>index()</b> – Returns index of first occurrence  
+    <br><code>"Python".index("t")</code> → <b>2</b>
+  </li>
+
+  <li>🔢 <b>count()</b> – Counts occurrences  
+    <br><code>"banana".count("a")</code> → <b>3</b>
+  </li>
+</ul>
+
+<hr>
+
+<h2>🔍 Membership Operators</h2>
+<ul>
+  <li><code>"Py" in "Python"</code> → <b>True</b></li>
+  <li><code>"java" not in "Python"</code> → <b>True</b></li>
+</ul>
+
+<hr>
+
+<h2>🔢 ASCII Values</h2>
+<p>
+Each character has an ASCII value. Comparisons depend on these values.
+</p>
+
+<ul>
+  <li><code>ord('A')</code> → 65</li>
+  <li><code>ord('a')</code> → 97</li>
+  <li>Uppercase letters have lower ASCII values than lowercase</li>
+</ul>
+
+<hr>
+
 
 
 
