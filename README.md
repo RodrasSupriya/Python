@@ -207,84 +207,102 @@ functionality and improve development efficiency.
 <hr>
 <h1 align="center">
   <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
-  Python String Methods
+  Python String Operations
 </h1>
 
 <p align="center">
-  Indexing • Slicing • Built-in Functions • Examples
+  Indexing • Slicing • Skipping • String Methods • Membership • ASCII
 </p>
 
 <hr>
 
-<h2>🔤 Strings in Python</h2>
+<h2>📍 Indexing</h2>
 <p>
-Strings are sequences of characters enclosed in quotes.
-They are <b>immutable</b>, meaning they cannot be changed after creation.
+Indexing is used to access individual characters in a string.
+Index values start from <b>0</b>.
 </p>
 
-<hr>
-
-<h2>📍 Indexing, Slicing & Skipping</h2>
-<ul>
-  <li><b>Indexing:</b> <code>s = "Python"</code> → <code>s[0]</code> → <b>P</b></li>
-  <li><b>Slicing:</b> <code>s[0:4]</code> → <b>Pyth</b></li>
-  <li><b>Skipping:</b> <code>s[0:6:2]</code> → <b>Pto</b></li>
-</ul>
+<p><b>Example:</b></p>
+<code>"Python"[0]</code> → <b>P</b><br>
+<code>"Python"[3]</code> → <b>h</b>
 
 <hr>
 
-<h2>🧰 Built-in String Functions (with Examples)</h2>
+<h2>✂ Slicing</h2>
+<p>
+Slicing is used to extract a part of a string using a start and end index.
+The end index is excluded.
+</p>
+
+<p><b>Example:</b></p>
+<code>"Python"[0:4]</code> → <b>Pyth</b><br>
+<code>"Python"[2:6]</code> → <b>thon</b>
+
+<hr>
+
+<h2>⏩ Skipping</h2>
+<p>
+Skipping extracts characters by jumping a fixed number of steps.
+Format: <code>start:end:step</code>
+</p>
+
+<p><b>Example:</b></p>
+<code>"Python"[0:6:2]</code> → <b>Pto</b>
+
+<hr>
+
+<h2>🧰 Built-in String Functions</h2>
 
 <ul>
-  <li>🔠 <b>title()</b> – Capitalizes first letter of each word  
+  <li><b>title()</b> – Converts first letter of each word to uppercase  
     <br><code>"hello world".title()</code> → <b>Hello World</b>
   </li>
 
-  <li>🔡 <b>lower()</b> – Converts to lowercase  
+  <li><b>lower()</b> – Converts all characters to lowercase  
     <br><code>"PYTHON".lower()</code> → <b>python</b>
   </li>
 
-  <li>🔠 <b>upper()</b> – Converts to uppercase  
+  <li><b>upper()</b> – Converts all characters to uppercase  
     <br><code>"python".upper()</code> → <b>PYTHON</b>
   </li>
 
-  <li>✔ <b>isupper()</b> – Checks if all letters are uppercase  
+  <li><b>isupper()</b> – Returns True if all letters are uppercase  
     <br><code>"PYTHON".isupper()</code> → <b>True</b>
   </li>
 
-  <li>✔ <b>islower()</b> – Checks if all letters are lowercase  
+  <li><b>islower()</b> – Returns True if all letters are lowercase  
     <br><code>"python".islower()</code> → <b>True</b>
   </li>
 
-  <li>🔤 <b>isalpha()</b> – Checks only alphabets  
+  <li><b>isalpha()</b> – Checks if string contains only alphabets  
     <br><code>"Python".isalpha()</code> → <b>True</b>
   </li>
 
-  <li>🔢 <b>isnumeric()</b> – Checks only numbers  
+  <li><b>isnumeric()</b> – Checks if string contains only numbers  
     <br><code>"123".isnumeric()</code> → <b>True</b>
   </li>
 
-  <li>🔠➕🔢 <b>isalnum()</b> – Checks alphabets & numbers  
+  <li><b>isalnum()</b> – Checks if string contains alphabets and numbers  
     <br><code>"Py123".isalnum()</code> → <b>True</b>
   </li>
 
-  <li>▶ <b>startswith()</b> – Checks starting characters  
+  <li><b>startswith()</b> – Checks starting characters  
     <br><code>"Python".startswith("Py")</code> → <b>True</b>
   </li>
 
-  <li>⏹ <b>endswith()</b> – Checks ending characters  
+  <li><b>endswith()</b> – Checks ending characters  
     <br><code>"Python".endswith("on")</code> → <b>True</b>
   </li>
 
-  <li>🔄 <b>replace()</b> – Replaces substring  
+  <li><b>replace()</b> – Replaces a substring  
     <br><code>"Hello World".replace("World","Python")</code> → <b>Hello Python</b>
   </li>
 
-  <li>📍 <b>index()</b> – Returns index of first occurrence  
+  <li><b>index()</b> – Returns index of first occurrence  
     <br><code>"Python".index("t")</code> → <b>2</b>
   </li>
 
-  <li>🔢 <b>count()</b> – Counts occurrences  
+  <li><b>count()</b> – Counts occurrences of a character  
     <br><code>"banana".count("a")</code> → <b>3</b>
   </li>
 </ul>
@@ -292,28 +310,39 @@ They are <b>immutable</b>, meaning they cannot be changed after creation.
 <hr>
 
 <h2>🔍 Membership Operators</h2>
-<ul>
-  <li><code>"Py" in "Python"</code> → <b>True</b></li>
-  <li><code>"java" not in "Python"</code> → <b>True</b></li>
-</ul>
+<p>
+Membership operators check whether a substring exists in a string.
+</p>
+
+<p><b>Examples:</b></p>
+<code>"Py" in "Python"</code> → <b>True</b><br>
+<code>"Java" not in "Python"</code> → <b>True</b>
 
 <hr>
 
 <h2>🔢 ASCII Values</h2>
 <p>
-Each character has an ASCII value. Comparisons depend on these values.
+ASCII values represent characters as numeric codes.
+String comparison is based on these values.
 </p>
 
-<ul>
-  <li><code>ord('A')</code> → 65</li>
-  <li><code>ord('a')</code> → 97</li>
-  <li>Uppercase letters have lower ASCII values than lowercase</li>
-</ul>
+<p><b>Examples:</b></p>
+<code>ord('A')</code> → <b>65</b><br>
+<code>ord('a')</code> → <b>97</b>
+
+<p>
+Uppercase letters have lower ASCII values than lowercase letters.
+</p>
 
 <hr>
 
 
 
+
+ 
+ 
+
+<
 
 
 
