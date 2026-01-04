@@ -129,6 +129,84 @@ They are ignored during execution.
 </ul>
 
 <hr>
+<h1 align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo.png" width="45"/>
+  Python Core Concepts
+</h1>
+
+<p align="center">
+  Type Conversion • Print Methods • Operators • Libraries
+</p>
+
+<hr>
+
+<h2>🔁 Type Conversion in Python</h2>
+<p>
+Type conversion is the process of converting one data type into another.
+Python supports both automatic and manual type conversions to ensure
+compatibility during operations.
+</p>
+
+<ul>
+  <li><b>Implicit Type Conversion:</b> Python automatically converts data types
+      (e.g., int to float during arithmetic operations).</li>
+  <li><b>Explicit Type Conversion:</b> Performed using built-in functions such as
+      <code>int()</code>, <code>float()</code>, <code>str()</code>, and <code>bool()</code>.</li>
+</ul>
+
+<hr>
+
+<h2>🖨 Print Conditions in Python</h2>
+<p>
+The <code>print()</code> function is used to display output. Python provides
+multiple ways to print values effectively.
+</p>
+
+<ul>
+  <li>📌 <b>Using Comma (,):</b> Prints multiple values with spaces automatically.</li>
+  <li>➕ <b>Using Plus (+):</b> Concatenates values (data types must be compatible).</li>
+  <li>🏷 <b>Using Identifiers:</b> Prints variable values directly.</li>
+  <li>🧩 <b>Using f-Strings:</b> Uses <code>f</code> and <code>{}</code> for formatted and readable output.</li>
+</ul>
+
+<p>
+Among these, <b>f-strings</b> are the most efficient and commonly used
+method in modern Python.
+</p>
+
+<hr>
+
+<h2>⚙ Operators in Python</h2>
+<p>
+Operators are used to perform operations on variables and values.
+Python supports various types of operators.
+</p>
+
+<ul>
+  <li>➕ <b>Arithmetic Operators:</b> +, -, *, /, %, //</li>
+  <li>📝 <b>Assignment Operators:</b> =, +=, -=, *=, /=</li>
+  <li>🔍 <b>Comparison Operators:</b> ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+  <li>🔗 <b>Logical Operators:</b> and, or, not</li>
+  <li>🆔 <b>Identity Operators:</b> is, is not</li>
+  <li>🧮 <b>Bitwise Operators:</b> &amp; (AND), | (OR)</li>
+  <li>📦 <b>Membership Operators:</b> in, not in</li>
+</ul>
+
+<hr>
+
+<h2>📚 Python Libraries</h2>
+<p>
+Libraries are collections of reusable code that extend Python’s
+functionality and improve development efficiency.
+</p>
+
+<ul>
+  <li>📊 <b>NumPy:</b> Numerical and array operations</li>
+  <li>📈 <b>Pandas:</b> Data analysis and manipulation</li>
+</ul>
+<hr>
+
+
 
 
 
